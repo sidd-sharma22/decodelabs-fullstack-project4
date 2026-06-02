@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | StudyHub</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <!-- Favicon: Title Bar Icon-->
+    <link rel="icon" href="../assests/icons/logo.svg">
+
+</head>
+<body>
+
+    <!-- Main container to center the registration page -->
+    <main class="auth-page">
+
+        <!-- The white card holding the registration form -->
+        <div class="auth-card">
+
+            <!-- Brand Logo -->
+            <div class="logo">
+                <img src="../assests/icons/logo.svg" alt="StudyHub Logo" width="30">
+                <span>StudyHub</span>
+            </div>
+
+            <h1>Create Account</h1>
+            <p class="auth-subtitle">Start managing your study goals today.</p>
+
+            <!-- Registration Form -->
+            <form id="register-form">
+                
+                <!-- Full Name Input -->
+                <input type="text" id="name" placeholder="Full Name" required>
+                
+                <!-- Email Input -->
+                <input type="email" id="email" placeholder="Email Address" required>
+                
+                <!-- Password Input -->
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Create Account</button>
+
+            </form>
+
+            <!-- Link to the login page for existing users -->
+            <p class="auth-footer">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+            <!-- Empty paragraph used by JavaScript to show error/success messages -->
+            <p id="message"></p>
+
+        </div>
+
+    </main>
+
+    <!-- Link to the authentication JavaScript logic -->
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

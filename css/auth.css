@@ -1,0 +1,95 @@
+/**
+ * ============================================================================
+ * AUTH.CSS
+ * Contains styles specifically for the Login and Register pages.
+ * ============================================================================
+ */
+
+/* ======================================
+   Main Page Wrapper
+====================================== */
+/* Centers the authentication card perfectly in the middle of the screen */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ======================================
+   Authentication Card
+====================================== */
+/* The white box containing the form */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Center the main heading inside the card */
+.auth-card h1 {
+  text-align: center;
+}
+
+/* Subtitle styling below the heading */
+.auth-subtitle {
+  text-align: center;
+  color: var(--gray);
+}
+
+/* ======================================
+   Form & Inputs
+====================================== */
+/* Stack the input fields and buttons vertically with some space between them */
+#register-form,
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Styling for the text boxes */
+#register-form input,
+#login-form input {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit; /* DEBUG FIX: Ensures inputs use the website's main font */
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* DEBUG FIX: Highlight the box orange when the user clicks inside it to type */
+#register-form input:focus,
+#login-form input:focus {
+  border-color: var(--orange);
+}
+
+/* ======================================
+   Footer Links & Messages
+====================================== */
+/* Center the "Don't have an account?" text */
+.auth-footer {
+  text-align: center;
+}
+
+/* Make the links stand out with the brand color */
+.auth-footer a {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* Styling for the success/error messages shown via JavaScript */
+#message {
+  text-align: center;
+  font-weight: 600;
+}

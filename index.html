@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyHub helps students stay productive with time tracking, goal setting, and progress reports.">
+    <title>StudyHub - Focus Better. Study Smarter.</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    <!-- Favicon: Title Bar Icon-->
+    <link rel="icon" href="assests/icons/logo.svg">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="StudyHub" />
+    <meta property="og:title" content="StudyHub - Focus Better. Study Smarter." />
+    <meta property="og:description" content="StudyHub helps students stay productive with time tracking, goal setting, and progress reports." />
+    <meta property="og:url" content="https://studyhub-decodelabs.vercel.app/" />
+    <meta property="og:image" content="https://studyhub-decodelabs.vercel.app/assests/images/og-image.png" />
+    <meta property="og:image:secure_url" content="https://studyhub-decodelabs.vercel.app/assests/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="StudyHub Dashboard Preview" />
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+        <div class="container header-container">
+            
+            <!-- Logo on Nav Bar -->
+            <div class="logo">
+                <img src="assests/icons/logo.svg" alt="StudyHub Logo" width="28" height="28">
+                <span>StudyHub</span>
+            </div>
+
+            <!-- Hamburger Menu: Mobile First Design -->
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#our-mission">About</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Main Home Page Content -->
+    <main id="main-content">
+
+        <!-- Hero Bar -->
+        <section id="hero">
+            <div class="container hero-container">
+                
+                <div class="hero-text">
+                    <span class="badge">
+                        <img src="assests/icons/check.svg" alt="Check Icon" width="14" height="14">
+                        Boost Your GPA
+                    </span>
+
+                    <h1>Focus Better.<br><span class="accent">Study Smarter.</span></h1>
+
+                    <p class="subtitle">A simple tool to help students stay productive. Track your time, smash your goals, and visualize your academic journey.</p>
+
+                    <div class="hero-actions">
+                        <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+                        <a href="#" class="btn btn-outline">Watch Demo</a>
+                    </div>
+
+                    <div class="social-proof">
+                        <div class="avatars">
+                            <span class="avatar" style="background:#E8703A"></span>
+                            <span class="avatar" style="background:#5B8C5A"></span>
+                            <span class="avatar" style="background:#3B82C4"></span>
+                        </div>
+                        <p>Joined by <strong>10,000+</strong> focus-driven students</p>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="dashboard-card">
+                        <div class="dash-dot"></div>
+                        <div class="dash-body">
+                            <div class="dash-lines">
+                                <div class="line"></div>
+                                <div class="line short"></div>
+                                <div class="line"></div>
+                                <div class="line short"></div>
+                            </div>
+                            <div class="dash-widgets">
+                                <div class="widget widget-clock">
+                                    <img src="assests/icons/clock.svg" alt="Clock Icon" width="24" height="24">
+                                </div>
+                                <div class="widget widget-fill"></div>
+                            </div>
+                        </div>
+                        <div class="dash-chart">
+                            <img src="assests/icons/chart.svg" alt="Chart Icon" width="32" height="32">
+                        </div>
+                    </div>
+
+                    <div class="floating-badge">
+                        <img src="assests/icons/clock.svg" alt="Clock Icon" width="16" height="16">
+                        <div>
+                            <small>Session Complete</small>
+                            <strong>+25 Focus Points</strong>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything you need to succeed</h2>
+                    <p>We've distilled student productivity into three core pillars that actually move the needle.</p>
+                </div>
+
+                <div class="feature-cards">
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <img src="assests/icons/clock.svg" alt="Clock Icon" width="24" height="24">
+                        </div>
+                        <h3>Time Tracking</h3>
+                        <p>Log study sessions and see where your time goes. Gain insights into your peak performance hours and avoid burnout.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon red">
+                            <img src="assests/icons/target.svg" alt="Target Icon" width="24" height="24">
+                        </div>
+                        <h3>Goal Setting</h3>
+                        <p>Create study goals and break them into manageable tasks. Use our smart priority system to tackle what matters most.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon blue">
+                            <img src="assests/icons/bars.svg" alt="Bar Chart Icon" width="24" height="24">
+                        </div>
+                        <h3>Progress Reports</h3>
+                        <p>Visualize progress with weekly reports and streaks. Watch your productivity grow with data-driven habit tracking.</p>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="our-mission">
+            <div class="container mission-container">
+                
+                <div class="mission-image">
+                    <img src="assests/images/student-studying.png" alt="Student studying at desk with laptop and notebook">
+                </div>
+
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>StudyHub helps students build productive habits by combining straightforward time tracking, easy goal-setting, and clear progress reports. Built for focus and simplicity, we believe that academic success shouldn't come at the cost of your mental well-being.</p>
+
+                    <ul class="check-list">
+                        <li><img src="assests/icons/circle-check.svg" alt="Check Icon" width="18" height="18"> No distracting notifications</li>
+                        <li><img src="assests/icons/circle-check.svg" alt="Check Icon" width="18" height="18"> Built-in Pomodoro techniques</li>
+                        <li><img src="assests/icons/circle-check.svg" alt="Check Icon" width="18" height="18"> Dark mode for late-night sessions</li>
+                        <li><img src="assests/icons/circle-check.svg" alt="Check Icon" width="18" height="18"> Sync across all your devices</li>
+                    </ul>
+
+                    <a href="index.html" class="link-accent">Learn more about our philosophy &rarr;</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="cta">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to take control of your study schedule?</h2>
+                    <p>Join thousands of students who have transformed their study habits with StudyHub.</p>
+                    <a href="pages/register.html" class="btn btn-white-outline">Create Free Account</a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="assests/icons/logo.svg" alt="StudyHub Logo" width="24" height="24">
+                        <span>StudyHub</span>
+                    </div>
+                    <p>Empowering students to reach their full potential through mindful productivity and simple goal management.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">Study Guides</a></li>
+                        <li><a href="#">Productivity Blog</a></li>
+                        <li><a href="#">Student Community</a></li>
+                        <li><a href="#">Partner Program</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" id="contact-us">
+                    <h3>CONTACT US</h3>
+                    <a href="mailto:contact@studyhub.app" class="contact-email">
+                        <img src="assests/icons/mail.svg" alt="Email Icon" width="16" height="16">
+                        contact@studyhub.app
+                    </a>
+                    <div class="social-links">
+                        <a href="#" aria-label="StudyHub on Twitter"><img src="assests/icons/twitter.svg" alt="" width="20" height="20"></a>
+                        <a href="#" aria-label="StudyHub on Instagram"><img src="assests/icons/instagram.svg" alt="" width="20" height="20"></a>
+                        <a href="#" aria-label="StudyHub on LinkedIn"><img src="assests/icons/linkedin.svg" alt="" width="20" height="20"></a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 StudyHub Productivity Inc. All rights reserved.</p>
+                <p>Made with &hearts; for students everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

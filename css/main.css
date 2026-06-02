@@ -1,0 +1,398 @@
+/**
+ * ============================================================================
+ * MAIN.CSS
+ * Contains global styles, resets, typography, variables, header, and footer.
+ * These styles apply to EVERY page in the StudyHub project.
+ * ============================================================================
+ */
+
+/* ======================================
+   Reset & Base Styles
+====================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* ======================================
+   CSS Variables (Colors & Themes)
+====================================== */
+:root {
+  --orange: #E8703A;
+  --orange-dark: #D4602C;
+  --orange-light: #FFF0E8;
+  --bg: #FBF8F4;
+  --white: #FFFFFF;
+  --dark: #1A1A1A;
+  --gray: #666;
+  --border: #E8E5E0;
+}
+
+/* ======================================
+   Typography
+====================================== */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--bg);
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+}
+
+h1 { 
+  font-weight: 700; 
+  font-size: clamp(1.5rem, 5vw, 2.25rem); 
+}
+
+h2 { 
+  font-weight: 700; 
+  font-size: clamp(1.125rem, 3.5vw, 1.5rem); 
+}
+
+h3 { 
+  font-weight: 600; 
+  font-size: 1rem; 
+}
+
+.accent { 
+  color: var(--orange); 
+}
+
+/* ======================================
+   Global Elements
+====================================== */
+img { 
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======================================
+   Accessibility
+====================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--orange);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 100;
+}
+
+.skip-link:focus { 
+  top: 16px; 
+}
+
+/* ======================================
+   Buttons
+====================================== */
+.btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border-color: var(--border);
+}
+
+.btn-outline:hover { 
+  border-color: var(--dark); 
+}
+
+.btn-white-outline {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-white-outline:hover {
+  background: white;
+  color: var(--orange);
+}
+
+/* ======================================
+   Header Navigation
+====================================== */
+header {
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 60;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate Hamburger into 'X' when active */
+.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* Main Navigation Menu (Hidden on mobile by default) */
+.nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 20px;
+  z-index: 55;
+}
+
+.nav.open { 
+  display: block; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--dark);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { 
+  color: var(--orange); 
+}
+
+/* Hide auth buttons on mobile to save space */
+.auth-buttons { 
+  display: none; 
+}
+
+/* ======================================
+   Footer
+====================================== */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 48px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.footer-brand .logo { 
+  margin-bottom: 12px; 
+}
+
+.footer-brand > p {
+  color: var(--gray);
+  font-size: 0.88rem;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+.footer-col h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-col a:hover { 
+  color: var(--orange); 
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.contact-email:hover { 
+  color: var(--orange); 
+}
+
+.social-links { 
+  display: flex; 
+  gap: 14px; 
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover { 
+  opacity: 0.7; 
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* ======================================
+   Global Media Queries
+====================================== */
+
+/* ---- Tablet (768px and up) ---- */
+@media (min-width: 768px) {
+  
+  .container { 
+    padding: 0 32px; 
+  }
+
+  .hamburger { 
+    display: none; 
+  }
+
+  .nav {
+    display: block;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .nav-links { 
+    flex-direction: row; 
+    gap: 28px; 
+  }
+  
+  /* Show auth buttons as flex items on larger screens */
+  .auth-buttons { 
+    display: inline-flex; 
+    gap: 12px;
+  }
+
+  .footer-grid { 
+    grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+  }
+  
+  .footer-bottom { 
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+}
+
+/* ---- Desktop (1024px and up) ---- */
+@media (min-width: 1024px) {
+  
+  .container { 
+    padding: 0 40px; 
+  }
+}

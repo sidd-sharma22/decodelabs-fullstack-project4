@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StudyHub</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <!-- Main container constraining the dashboard width -->
+    <main class="dashboard-page">
+
+        <!-- Dashboard Header: Contains the title, subtitle, and logout button -->
+        <section class="dashboard-header">
+            <div>
+                <h1>My Tasks</h1>
+                <p class="dashboard-subtitle">Manage your study goals efficiently.</p>
+            </div>
+            
+            <button id="logout-btn" class="btn btn-outline">Logout</button>
+        </section>
+
+        <!-- Task Creation Section: Form to add new tasks -->
+        <section class="task-form-section">
+            <form id="task-form">
+                
+                <!-- Input field for the task title -->
+                <input type="text" id="task-title" placeholder="Enter task title" required>
+                
+                <!-- Submit button to trigger the task creation -->
+                <button type="submit" class="btn btn-primary">Add Task</button>
+                
+            </form>
+        </section>
+        
+        <!-- Task Grid: Empty container where JavaScript will dynamically inject the task cards -->
+        <section id="task-container" class="task-grid">
+            <!-- Task cards will be loaded here by dashboard.js -->
+        </section>
+
+    </main>
+
+    <!-- Link to the dashboard-specific JavaScript logic -->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | StudyHub</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <!-- Favicon: Title Bar Icon-->
+    <link rel="icon" href="../assests/icons/logo.svg">
+
+</head>
+<body>
+
+    <!-- Main container to center the authentication page -->
+    <main class="auth-page">
+
+        <!-- The white card holding the login form -->
+        <div class="auth-card">
+
+            <!-- Brand Logo -->
+            <div class="logo">
+                <img src="../assests/icons/logo.svg" alt="StudyHub Logo" width="30">
+                <span>StudyHub</span>
+            </div>
+
+            <h1>Welcome Back</h1>
+            <p class="auth-subtitle">Login to continue your study journey.</p>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                
+                <!-- Email Input -->
+                <input type="email" id="email" placeholder="Email Address" required>
+                
+                <!-- Password Input -->
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Login</button>
+
+            </form>
+
+            <!-- Link to the registration page for new users -->
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+            <!-- Empty paragraph used by JavaScript to show error/success messages -->
+            <p id="message"></p>
+
+        </div>
+
+    </main>
+
+    <!-- Link to the authentication JavaScript logic -->
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

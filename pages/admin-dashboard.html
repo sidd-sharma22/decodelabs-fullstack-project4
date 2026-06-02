@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | StudyHub</title>
+
+    <!-- CSS Links: Pointing to the newly organized CSS folder -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <!-- Main container constraining the dashboard width -->
+    <main class="dashboard-page">
+
+        <!-- Dashboard Header: Contains the title and logout button -->
+        <section class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <button id="logout-btn" class="btn btn-outline">Logout</button>
+        </section>
+
+        <!-- Statistics Grid: Displays top-level platform metrics -->
+        <section class="stats-grid">
+            
+            <!-- Completed Tasks Stat -->
+            <div class="stat-card">
+                <h3>Completed Tasks</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+            <!-- Pending Tasks Stat -->
+            <div class="stat-card">
+                <h3>Pending Tasks</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+            
+            <!-- Total Users Stat -->
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="total-users">0</p>
+            </div>
+
+            <!-- Total Tasks Stat -->
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+        </section>
+
+        <!-- Users Section: Container for the list of registered users -->
+        <section>
+            <h2>Users</h2>
+            <!-- Users will be loaded here dynamically by admin.js -->
+            <div id="users-container"></div>
+        </section>
+
+        <!-- Tasks Section: Container for viewing and managing all platform tasks -->
+        <section style="margin-top: 40px;">
+            <h2>Tasks</h2>
+            <!-- Tasks will be loaded here dynamically by admin.js -->
+            <div id="admin-task-container"></div>
+        </section>
+
+    </main>
+
+    <!-- Link to the admin-specific JavaScript logic -->
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>
