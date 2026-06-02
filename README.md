@@ -235,13 +235,13 @@ Relationship:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/sidd-sharma22/decodelabs-fullstack-project4
 ```
 
 ### 2. Navigate to Project
 
 ```bash
-cd studyhub
+cd decodelabs-fullstack-project4
 ```
 
 ### 3. Create Virtual Environment
@@ -275,8 +275,8 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```env
-DATABASE_URL=postgresql://username:password@localhost/studyhub
-SECRET_KEY=your_secret_key
+DATABASE_URL=postgresql://postgresql:my_password@localhost/studyhub
+SECRET_KEY=my_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
 ```
